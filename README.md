@@ -1,3 +1,46 @@
+ch57x-keyboard-tool --vendor-id 4489 --product-id 34880 upload my-mapping.yaml
+
+# See 'doc/actions.md' for description of available actions which
+# may be assigned to keys. Comments here describe only configuration
+# file format itself.
+
+# Normal keyboard orientation is when
+# buttons are on the left side and knobs are on the right.
+# However, you may want to use the keyboard in another orientation.
+# To avoid remapping button positions in your head, just set it here.
+# Possible values are:
+#   (horizontal)
+#   - 'normal': buttons on the left, knobs on the right
+#   - 'upsidedown': buttons on the right, knobs on the left
+#   (vertical)
+#   - 'clockwise': buttons on the top, knobs on the bottom
+#   - 'counterclockwise': buttons on the bottom, knobs on the top
+orientation: normal
+
+# Different keyboard models have different numbers of buttons and knobs.
+# Set it here for proper handling.
+# Count rows and columns with the keyboard in normal orientation (knobs on the right)
+rows: 2
+columns: 1
+knobs: 0
+
+# Layers are sets of alternative key mappings.
+# The current layer is changed using a button on the side of the keyboard
+# and displayed with LEDs on top (only for the moment of changing).
+# All keyboards I saw had three layers, but I suppose other variants exist.
+layers:
+  - buttons:
+      # Array of buttons.
+      # In horizontal orientations it's `rows` rows `columns` buttons each.
+      # In vertical: `columns` rows `rows` buttons each.
+      - ["1"]
+      - ["2"]
+    knobs:
+      # Array of knobs.
+      # In horizontal orientations it's `rows` rows `knobs` knobs each.
+      # In vertical: `knobs` rows `rows` knobs each.
+      
+
 # ch57x-keyboard-tool Macro Keyboard Configuration Utility
 
 ![Last Commit Shields.io](https://img.shields.io/github/last-commit/kriomant/ch57x-keyboard-tool?style=for-the-badge) ![Release Workflow Badge](https://github.com/kriomant/ch57x-keyboard-tool/actions/workflows/release.yml/badge.svg)
